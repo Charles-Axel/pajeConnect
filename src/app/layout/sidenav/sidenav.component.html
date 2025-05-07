@@ -1,0 +1,91 @@
+<div class="sidenav" [ngClass]="collapsed ? 'sidenav-collapsed': '' ">
+    <div class="logo-container">
+        <button class="logo"
+                (click)="toggleCollapse()"><img src="/images/Frame 4.png" alt="Logo PAJE Connect"></button>
+        @if (collapsed) {
+            <div class="logo-text"><img src="/images/Logo.png" alt="Logo PAJE Connect"></div>
+            <button class="btn-close" (click)="closeSidenav()">
+                <mat-icon class="fal fa-times">close</mat-icon>
+            </button>
+        }
+    </div>
+    <ul class="sidenav-nav">
+        @for (data of navData; track data) {
+            <li class="sidenav-nav-item">
+                <a class="sidenav-nav-link" [routerLink]="[data.routeLink]">
+                    <!--<i class="sidenav-link-icon" [class]="data.icon"></i>-->
+                    <mat-icon class="sidenav-link-icon">{{data.icon}}</mat-icon>
+                    @if (collapsed) {
+                        <span class="sidenav-link-text">{{ data.label }}</span>
+                    }
+                </a>
+            </li>
+        }
+        <div class="spacer"></div>
+
+        <li class="sidenav-nav-item">
+            <a class="sidenav-nav-link" [routerLink]="[]">
+                <mat-icon class="sidenav-link-icon">description</mat-icon>
+                @if (collapsed) {
+                    <span class="sidenav-link-text">Devis</span>
+                }
+            </a>
+        </li>
+
+        <li class="sidenav-nav-item">
+            <a class="sidenav-nav-link" [routerLink]="[]">
+                <mat-icon class="sidenav-link-icon">apartment</mat-icon>
+                @if (collapsed) {
+                    <span class="sidenav-link-text">Chantiers</span>
+                }
+            </a>
+        </li>
+
+        <li class="sidenav-nav-item">
+            <a class="sidenav-nav-link" [routerLink]="[]">
+                <mat-icon class="sidenav-link-icon">call</mat-icon>
+                @if (collapsed) {
+                    <span class="sidenav-link-text">Contact</span>
+                }
+            </a>
+        </li>
+
+
+        <div class="spacer"></div>
+        <li class="sidenav-nav-item">
+            <a class="sidenav-nav-link" [routerLink]="[]">
+                <mat-icon class="sidenav-link-icon">login</mat-icon>
+                @if (collapsed) {
+                    <span class="sidenav-link-text">Connexion</span>
+                }
+            </a>
+        </li>
+
+        <li class="sidenav-nav-item">
+            <a class="sidenav-nav-link" [routerLink]="">
+                <mat-icon class="sidenav-link-icon">person_add</mat-icon>
+                @if (collapsed) {
+                    <span class="sidenav-link-text">Enregistrement</span>
+                }
+            </a>
+        </li>
+
+        <li class="sidenav-nav-item">
+            <a class="sidenav-nav-link" [routerLink]="">
+                <mat-icon class="sidenav-link-icon">account_circle</mat-icon>
+                @if (collapsed) {
+                    <span class="sidenav-link-text">Profil</span>
+                }
+            </a>
+        </li>
+
+        <li class="sidenav-nav-item">
+            <a class="sidenav-nav-link" [routerLink]="">
+                <mat-icon class="sidenav-link-icon">logout</mat-icon>
+                @if (collapsed) {
+                    <span class="sidenav-link-text">Déconnexion</span>
+                }
+            </a>
+        </li>
+    </ul>
+</div>
