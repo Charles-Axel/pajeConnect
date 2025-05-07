@@ -16,14 +16,14 @@
 
 .hero {
     height: 100vh;
-   background-image: url('/images/accueil/salle_de_bain2.jpg'); /* Change cette URL */
+    background-image: url('/images/accueil/salle_de_bain2.jpg'); /* Change cette URL */
     background-size: cover;
     background-position: center;
     position: relative;
 }
 
 .overlay {
-    background-color: rgba(0, 0, 0, 0.5);/* assombrit l'image */
+    background-color: rgba(0, 0, 0, 0.6);/* assombrit l'image */
     height: 100%;
     width: 100%;
     display: flex;
@@ -37,11 +37,108 @@
     padding: 20px;
 }
 
+.title-group {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.content .paje {
+    font-family: 'Palanquin', sans-serif;
+    font-size: clamp(50px, 5vw, 150px);
+    line-height: 0.9;
+    margin-right: 8vw;
+    z-index: 2;
+    align-self: center;
+    position: relative;
+    animation: textRoll 0.7s ease-in-out 0s 1 normal forwards;
+}
+
+@keyframes textRoll {
+    0% {
+        opacity: 0;
+        transform: translateY(-100px) rotate(-100deg);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0) rotate(0deg);
+    }
+}
+
+.content .connect {
+    font-family: 'Colombo', sans-serif;
+    font-size: clamp(28px, 4vw, 70px);
+    align-self: center;
+    line-height: 1;
+    margin-left: 7vw;
+    z-index: 1;
+    animation: textRollRight 0.7s ease-in-out 0s 1 normal forwards;
+}
+
+@keyframes textRollRight {
+    0% {
+        opacity: 0;
+        transform: translateX(80px) rotate(100deg);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0) rotate(0deg);
+    }
+}
+
 .content h1 {
     font-family: 'Palanquin', sans-serif;
     font-size: clamp(32px, 4vw, 100px);
     margin-bottom: 20px;
+    animation: textBounce 1s ease-out 0s 1 normal forwards;
 }
+
+@keyframes textBounce {
+    0% {
+        animation-timing-function: ease-in;
+        opacity: 0;
+        transform: translateY(-70px);
+    }
+
+    38% {
+        animation-timing-function: ease-out;
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    55% {
+        animation-timing-function: ease-in;
+        transform: translateY(-30px);
+    }
+
+    72% {
+        animation-timing-function: ease-out;
+        transform: translateY(0);
+    }
+
+    81% {
+        animation-timing-function: ease-in;
+        transform: translateY(-7px);
+    }
+
+    90% {
+        animation-timing-function: ease-out;
+        transform: translateY(0);
+    }
+
+    95% {
+        animation-timing-function: ease-in;
+        transform: translateY(-4px);
+    }
+
+    100% {
+        animation-timing-function: ease-out;
+        transform: translateY(0);
+    }
+}
+
 
 .content p {
     font-family: 'Colombo', sans-serif;
