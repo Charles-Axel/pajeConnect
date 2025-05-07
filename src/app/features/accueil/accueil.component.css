@@ -1,0 +1,247 @@
+.accueil-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    height: 25vh;
+    width:90%;
+    margin: 5% auto;
+}
+
+.hero {
+    height: 100vh;
+   background-image: url('/images/accueil/salle_de_bain2.jpg'); /* Change cette URL */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.5);/* assombrit l'image */
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content {
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+.content h1 {
+    font-family: 'Palanquin', sans-serif;
+    font-size: clamp(32px, 4vw, 100px);
+    margin-bottom: 20px;
+}
+
+.content p {
+    font-family: 'Colombo', sans-serif;
+    font-size: clamp(16px, 2vw, 70px);
+    margin-bottom: 30px;
+}
+
+.btn {
+    text-decoration: none;
+    background-color: var(--primary);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: white;
+    color: var(--primary);
+}
+
+.service-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    min-height: 80vh;
+    margin-top: 5%;
+    padding: 3%;
+    gap: 5%;
+}
+
+.service-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: clamp(200px, 45vw, 800px);
+    font-size: clamp(10px, 2vw, 30px);
+}
+
+.service-left h2 {
+    font-family: 'Palanquin', sans-serif;
+    color: var(--secondary);
+    font-size: clamp(16px, 2vw, 45px);
+    margin-bottom: 20px;
+}
+
+.service-left p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(10px, 2vw, 20px);
+    margin-bottom: 20px;
+}
+
+.service-right {
+    display: flex;
+    align-items: center;
+    width: clamp(200px, 45vw, 800px);
+}
+
+.service-right li {
+    font-family: 'Palanquin', sans-serif;
+    color: var(--secondary);
+    font-size: clamp(10px, 2vw, 25px);
+    margin-bottom: clamp(10px, 2vw, 40px);
+}
+
+.service-list-title {
+  display: flex;
+  align-items: center;
+}
+
+.service-list-title mat-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--secondary);
+    font-size: clamp(15px, 3vw, 30px);
+    height: clamp(15px, 6vw, 30px);
+    width: clamp(15px, 6vw, 30px);
+    margin-right: 10px;
+}
+
+
+.service-right li p{
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(10px, 2vw, 20px);
+    margin-bottom: clamp(10px, 2vw, 40px);
+}
+
+.wrapper {
+    margin-top: 5%;
+    display: flex;
+    align-items: center;
+    width: 95%;
+    margin-inline: auto;
+    position: relative;
+    height: 20vw;
+    max-height: 400px;
+    overflow: hidden;
+    mask-image: linear-gradient(
+            to right,
+            rgba(0, 0, 0, 0),
+            rgba(0, 0, 0, 1) 20%,
+            rgba(0, 0, 0, 1) 80%,
+            rgba(0, 0, 0, 0)
+    );
+}
+
+@keyframes scrollLeft {
+    to {
+        left: -300px;
+    }
+}
+
+.item {
+    width: 30vw;
+    max-width: 300px;
+    height: 100%;
+    border-radius: 6px;
+    position: absolute;
+    left: max(calc(280px * 8), 100%);
+    animation-name: scrollLeft;
+    animation-duration: 30s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@media (max-width: 768px) {
+    .wrapper {
+        height: 40vw;
+    }
+
+    .item {
+        width: 30vw;
+        max-width: 300px;
+        height: 100%;
+        left: max(calc(100px * 8), 100%);
+    }
+}
+
+.item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.item1 {
+    animation-delay: calc(30s / 8 * (8 - 1) * -1);
+}
+
+.item2 {
+    animation-delay: calc(30s / 8 * (8 - 2) * -1);
+}
+
+.item3 {
+    animation-delay: calc(30s / 8 * (8 - 3) * -1);
+}
+
+.item4 {
+    animation-delay: calc(30s / 8 * (8 - 4) * -1);
+}
+
+.item5 {
+    animation-delay: calc(30s / 8 * (8 - 5) * -1);
+}
+
+.item6 {
+    animation-delay: calc(30s / 8 * (8 - 6) * -1);
+}
+
+.item7 {
+    animation-delay: calc(30s / 8 * (8 - 7) * -1);
+}
+
+.item8 {
+    animation-delay: calc(30s / 8 * (8 - 8) * -1);
+}
+
+.images {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 10% 0 5% 0;
+    padding: 5% 0;
+    background-color: var(--primary);
+}
+
+.images img {
+    width: 20vw;
+    height: 50vh;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.images :nth-child(2) {
+   margin-top: 10%;
+}
+
+.images :nth-child(3) {
+    margin-top: 20%;
+}
