@@ -32,7 +32,9 @@ export class SidenavComponent {
   }
 
   closeSidenav(): void {
-    this.collapsed = false;
-    this.onToggleSideNav.emit({collapsed: this.collapsed, screenWidth: this.screenWidth});
+    setTimeout(() => {
+      this.collapsed = false;
+      this.onToggleSideNav.emit({ collapsed: this.collapsed, screenWidth: this.screenWidth });
+    }, 250);
   }
 }

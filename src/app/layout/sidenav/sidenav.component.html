@@ -22,7 +22,7 @@
     <ul class="sidenav-nav">
         @for (data of navData; track data) {
             <li class="sidenav-nav-item">
-                <a class="sidenav-nav-link" [routerLink]="[data.routeLink]">
+                <a class="sidenav-nav-link" [routerLink]="[data.routeLink]" (click)="closeSidenav()">
                     <!--<i class="sidenav-link-icon" [class]="data.icon"></i>-->
                     <mat-icon class="sidenav-link-icon">{{data.icon}}</mat-icon>
                     @if (collapsed) {
@@ -34,7 +34,7 @@
         <div class="spacer"></div>
 
         <li class="sidenav-nav-item">
-            <a class="sidenav-nav-link" [routerLink]="[]">
+            <a class="sidenav-nav-link" [routerLink]="[]" (click)="closeSidenav()">
                 <mat-icon class="sidenav-link-icon">description</mat-icon>
                 @if (collapsed) {
                     <span class="sidenav-link-text">Devis</span>
@@ -43,7 +43,7 @@
         </li>
 
         <li class="sidenav-nav-item">
-            <a class="sidenav-nav-link" [routerLink]="[]">
+            <a class="sidenav-nav-link" [routerLink]="[]" (click)="closeSidenav()">
                 <mat-icon class="sidenav-link-icon">apartment</mat-icon>
                 @if (collapsed) {
                     <span class="sidenav-link-text">Chantiers</span>
@@ -52,7 +52,7 @@
         </li>
 
         <li class="sidenav-nav-item">
-            <a class="sidenav-nav-link" [routerLink]="[]">
+            <a class="sidenav-nav-link" [routerLink]="[]" (click)="closeSidenav()">
                 <mat-icon class="sidenav-link-icon">call</mat-icon>
                 @if (collapsed) {
                     <span class="sidenav-link-text">Contact</span>
@@ -63,7 +63,7 @@
 
         <div class="spacer"></div>
         <li class="sidenav-nav-item">
-            <a class="sidenav-nav-link" [routerLink]="[]">
+            <a class="sidenav-nav-link" [routerLink]="[]" (click)="closeSidenav()">
                 <mat-icon class="sidenav-link-icon">login</mat-icon>
                 @if (collapsed) {
                     <span class="sidenav-link-text">Connexion</span>
@@ -72,7 +72,7 @@
         </li>
 
         <li class="sidenav-nav-item">
-            <a class="sidenav-nav-link" [routerLink]="">
+            <a class="sidenav-nav-link" [routerLink]="" (click)="closeSidenav()">
                 <mat-icon class="sidenav-link-icon">person_add</mat-icon>
                 @if (collapsed) {
                     <span class="sidenav-link-text">Enregistrement</span>
@@ -81,7 +81,7 @@
         </li>
 
         <li class="sidenav-nav-item">
-            <a class="sidenav-nav-link" [routerLink]="">
+            <a class="sidenav-nav-link" [routerLink]="" (click)="closeSidenav()">
                 <mat-icon class="sidenav-link-icon">account_circle</mat-icon>
                 @if (collapsed) {
                     <span class="sidenav-link-text">Profil</span>
@@ -90,7 +90,7 @@
         </li>
 
         <li class="sidenav-nav-item">
-            <a class="sidenav-nav-link" [routerLink]="">
+            <a class="sidenav-nav-link" [routerLink]="" (click)="closeSidenav()">
                 <mat-icon class="sidenav-link-icon">logout</mat-icon>
                 @if (collapsed) {
                     <span class="sidenav-link-text">Déconnexion</span>
