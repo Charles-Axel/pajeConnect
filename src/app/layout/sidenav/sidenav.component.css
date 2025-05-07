@@ -2,7 +2,7 @@
     background: var(--primary);
     transition: all 0.5s ease;
     position: fixed;
-    z-index: 1;
+    z-index: 4;
     top: 0;
     width: 5rem;
     height: 100vh;
@@ -112,6 +112,12 @@
 .spacer {
     flex: 1 1 auto;
 }
+
+.logo-icon,
+.logo-mobile {
+    display: none;
+}
+
 /*
 @media (max-width: 768px) {
     .sidenav {
@@ -182,6 +188,23 @@
         padding: 1rem 1rem;
     }
 
+    .logo-img {
+        display: none;
+    }
+
+    .logo-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 24px;
+        width: 2.4rem;
+    }
+
+    .logo-mobile {
+        display: flex;
+        width: 100px;
+    }
+
     .btn-close {
         display: block;
     }
@@ -222,6 +245,7 @@
         display: flex;
         margin: 0.5rem 1.3rem 0.5rem 0.5rem;
         width: 40%;
+        cursor: default;
     }
 
     .sidenav-collapsed .sidenav-nav-link {
@@ -234,5 +258,9 @@
 
     .sidenav-collapsed .sidenav-link-icon {
         display: flex;
+    }
+
+    .sidenav-collapsed .logo-mobile {
+        display: none;
     }
 }

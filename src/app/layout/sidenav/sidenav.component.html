@@ -1,9 +1,19 @@
 <div class="sidenav" [ngClass]="collapsed ? 'sidenav-collapsed': '' ">
     <div class="logo-container">
         <button class="logo"
-                (click)="toggleCollapse()"><img src="/images/PAJE.svg" alt="Logo PAJE Connect"></button>
+                (click)="toggleCollapse()">
+            <img class="logo-img" src="/images/PAJE.svg" alt="Logo PAJE Connect">
+            <mat-icon class="logo-icon">menu</mat-icon>
+        </button>
+        <a href="">
+            <img class="logo-mobile" src="/images/Logo.svg" alt="Logo PAJE Connect">
+        </a>
         @if (collapsed) {
-            <div class="logo-text"><img src="/images/Logo.png" alt="Logo PAJE Connect"></div>
+            <a href="">
+                <div class="logo-text">
+                    <img src="/images/Logo.svg" alt="Logo PAJE Connect">
+                </div>
+            </a>
             <button class="btn-close" (click)="closeSidenav()">
                 <mat-icon class="fal fa-times">close</mat-icon>
             </button>
